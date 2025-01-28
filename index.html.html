@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lækker Hjemmeside</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&family=Space+Grotesk:wght@600;700" rel="stylesheet">
+
+    <style>
+        /* Global styling */
+        body {
+            margin: 0;
+            background-color: black;
+            color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
+            font-family: 'Space Grotesk', sans-serif; /* Anvendt Space Grotesk skrifttype */
+            font-weight: bold; /* Gør al tekst fed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        img {
+            max-width: 300px; /* Ændret størrelsen på logoet */
+            height: auto;
+        }
+        .instagram {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .instagram span {
+            margin-right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .instagram a {
+            color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .instagram a img {
+            width: 36px;
+            height: 36px;
+            filter: none; /* No filter, just the yellow logo */
+        }
+
+        /* Main content styling */
+        main {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        /* Text under logo */
+        .description {
+            font-family: 'Archivo Black', sans-serif; /* Anvendt Archivo Black skrifttype */
+            font-size: 24px; /* Øget font-størrelse */
+            font-weight: bold; /* Gør teksten fed */
+            margin-top: 40px; /* Tilføjet luft mellem logo og tekst */
+            color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
+        }
+
+        /* Footer styling */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Instagram embed styling */
+        .instagram-feed {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 30px;
+        }
+
+        /* Margin for space between description and Instagram */
+        .instagram-section {
+            margin-top: 60px; /* Luft mellem tekst og Instagram */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                font-size: 24px;
+            }
+            .instagram span {
+                font-size: 14px;
+            }
+            .instagram a img {
+                width: 30px;
+                height: 30px;
+            }
+            .description {
+                font-size: 20px; /* Mindre skriftstørrelse på mobile enheder */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>LÆKKERLÆKKERLÆKKER</header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Replace with your actual logo file if it's accessible -->
+        <img src="logo lkkr.png" alt="Lækker logo">  <!-- Ensure the logo path is correct -->
+        <p class="description">Vi er fire gutter, som laver øl, der smager LÆKKERLÆKKERLÆKKER</p>
+
+        <!-- Instagram Follow Section with extra margin -->
+        <div class="instagram-section">
+            <div class="instagram">
+                <span>FØLG OS PÅ INSTA</span>
+                <a href="https://www.instagram.com/laekkerlaekkerlaekker" target="_blank">
+                    <!-- Using a yellow Instagram logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                </a>
+            </div>
+
+            <!-- Instagram Feed Embed (Using the provided code) -->
+            <div data-behold-id="umO7taF4taHgbRjcpag3"></div>
+            <script>
+              (() => {
+                const d = document, s = d.createElement("script"); s.type = "module";
+                s.src = "https://w.behold.so/widget.js"; d.head.append(s);
+              })();
+            </script>
+        </div>
+    </main>
+
+    
+</body>
+</html>
