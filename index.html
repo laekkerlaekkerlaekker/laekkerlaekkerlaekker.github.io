@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -7,7 +6,7 @@
     <title>Lækker Hjemmeside</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&family=Space+Grotesk:wght@600;700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400" rel="stylesheet">
 
     <style>
         /* Global styling */
@@ -15,7 +14,7 @@
             margin: 0;
             background-color: black;
             color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
-            font-family: 'Space Grotesk', sans-serif; /* Anvendt Space Grotesk skrifttype */
+            font-family: 'Archivo Black', sans-serif; /* Anvendt Archivo Black skrifttype for alt */
             font-weight: bold; /* Gør al tekst fed */
             display: flex;
             flex-direction: column;
@@ -26,51 +25,75 @@
         header {
             position: absolute;
             top: 20px;
-            left: 20px;
+            left: 200px; /* Rykket overskriften længere ind */
             font-size: 30px;
             font-weight: bold;
+            color: white; /* Ændret overskriftens farve til hvid */
             z-index: 1;
         }
         img {
-            max-width: 300px; /* Ændret størrelsen på logoet */
+            max-width: 500px; /* Øget størrelsen på logoet */
             height: auto;
         }
         .instagram {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 20px; /* Rykket Instagram-logoet længere ned */
+            right: 300px; /* Rykket Instagram-logoet længere ind */
             display: flex;
             align-items: center;
         }
-        .instagram span {
-            margin-right: 10px;
-            font-size: 16px;
-            font-weight: bold;
-        }
         .instagram a {
-            color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
+            color: white; /* Ændret farven på linket til hvid */
             text-decoration: none;
             font-weight: bold;
         }
         .instagram a img {
             width: 36px;
             height: 36px;
-            filter: none; /* No filter, just the yellow logo */
+            filter: none; /* Ingen filter, bare et hvidt logo */
         }
 
         /* Main content styling */
         main {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 180px; /* Rykket logoet længere ned */
         }
 
         /* Text under logo */
         .description {
-            font-family: 'Archivo Black', sans-serif; /* Anvendt Archivo Black skrifttype */
             font-size: 24px; /* Øget font-størrelse */
             font-weight: bold; /* Gør teksten fed */
             margin-top: 40px; /* Tilføjet luft mellem logo og tekst */
             color: #FFCC00FF; /* Ændret tekstfarve til #FFCC00FF */
+        }
+
+        /* Rullende tekst */
+        .rolling-text {
+            white-space: nowrap;
+            overflow: hidden;
+            color: #FFCC00FF; /* Gul tekstfarve */
+            font-size: 50px; /* Øget skriftstørrelse */
+            font-weight: bold;
+            position: absolute;
+            top: 300px; /* Placeret mellem logo og Instagram feed */
+            animation: rollText 3s linear infinite; /* Animationen varer 5 sekunder */
+        }
+
+        @keyframes rollText {
+            from {
+                transform: translateX(100%); /* Starter helt til højre */
+            }
+            to {
+                transform: translateX(-100%); /* Slutter helt til venstre */
+            }
+        }
+
+        /* Følg os på insta tekst */
+        .follow-insta {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFCC00FF; /* Gul tekstfarve */
+            margin-top: 300px;
         }
 
         /* Footer styling */
@@ -99,15 +122,15 @@
             header {
                 font-size: 24px;
             }
-            .instagram span {
-                font-size: 14px;
-            }
             .instagram a img {
                 width: 30px;
                 height: 30px;
             }
             .description {
                 font-size: 20px; /* Mindre skriftstørrelse på mobile enheder */
+            }
+            .rolling-text {
+                font-size: 30px; /* Mindre skriftstørrelse på mobile enheder */
             }
         }
     </style>
@@ -119,15 +142,21 @@
     <main>
         <!-- Replace with your actual logo file if it's accessible -->
         <img src="logo lkkr.png" alt="Lækker logo">  <!-- Ensure the logo path is correct -->
-        <p class="description">Vi er fire gutter, som laver øl, der smager LÆKKERLÆKKERLÆKKER</p>
+        <p class="description">Vi er fire gutter, som laver øl, der smager:</p>
 
-        <!-- Instagram Follow Section with extra margin -->
+        <!-- Rullende tekst -->
+        <div class="rolling-text">LÆKKERLÆKKERLÆKKER</div>
+
+
+        <!-- Instagram Follow Section without text -->
         <div class="instagram-section">
+            <!-- Følg os på insta tekst -->
+            <div class="follow-insta">Følg os på Insta</div>
+
             <div class="instagram">
-                <span>FØLG OS PÅ INSTA</span>
                 <a href="https://www.instagram.com/laekkerlaekkerlaekker" target="_blank">
-                    <!-- Using a yellow Instagram logo -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                    <!-- Using a white Instagram logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Instagram_Logo_2022_white.svg" alt="Instagram">
                 </a>
             </div>
 
@@ -141,7 +170,5 @@
             </script>
         </div>
     </main>
-
-    
 </body>
 </html>
